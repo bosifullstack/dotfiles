@@ -1,3 +1,3 @@
 # Enter script code
 
-keyboard.send_keys('ã') ã
+keyboard.send_keys('ã')
