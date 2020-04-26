@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/bosifullstack/wordpress/alura/wp-content/themes/alura/assets/css'
+let g:netrw_dirhist_2='/home/bosifullstack/wordpress/alura/wp-content/themes/alura'
+let g:netrw_dirhist_3='/home/bosifullstack/wordpress/alura/wp-content/themes'
+let g:netrw_dirhist_4='/home/bosifullstack/wordpress/alura/wp-content/themes/alura'
