@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "til",
+    "description": "crase",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 258,
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -19,8 +19,7 @@
     },
     "hotkey": {
         "modifiers": [
-            "<hyper>",
-            "<shift>"
+            "<hyper>"
         ],
         "hotKey": "q"
     },
