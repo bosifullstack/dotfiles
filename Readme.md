@@ -8,6 +8,17 @@ CAPSLOCK KEY - Don't forget to put it as a Hyper key, configuring other keys to 
 
 ## CLI tools that I like
 
+### Apps
+
 - [TUIR - Reddit CLI](https://gitlab.com/ajak/tuir#usage)
 - [Todoist CLI](https://github.com/sachaos/todoist)
 - [Spotify CLI](https://github.com/Rigellute/spotify-tui)
+- [Grip - Markdown Preview](https://github.com/joeyespo/grip)
+
+### Search engines
+
+- [ddgr - DuckDuckGo from terminal](https://github.com/jarun/ddgr)
+
+### Lists of CLI tools
+
+- [Agarrharr - Awesome CLI apps](https://github.com/agarrharr/awesome-cli-apps)
