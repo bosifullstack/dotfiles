@@ -19,3 +19,9 @@ alias tdl='todoist list'
 alias tda='todoist add'
 alias tds='todoist sync'
 alias tdr='rmtodoist.sh'
+
+gacp () {
+  ga
+  git commit -m "$1"
+  gp
+}
