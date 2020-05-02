@@ -19,6 +19,10 @@ CAPSLOCK KEY - Don't forget to put it as a Hyper key, configuring other keys to 
 
 - [ddgr - DuckDuckGo from terminal](https://github.com/jarun/ddgr)
 
+### Terminal utilities
+
+- [ag - The_silver_searcher](https://github.com/ggreer/the_silver_searcher)
+
 ### Lists of CLI tools
 
 - [Agarrharr - Awesome CLI apps](https://github.com/agarrharr/awesome-cli-apps)
