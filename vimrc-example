@@ -6,6 +6,8 @@
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+syntax on
+
 " Save 1,000 items in history
 set history=1000
 
@@ -97,4 +99,7 @@ map <C-l> <C-W>l
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+" Removing the swap files
+set noswapfile
+"
 " For more options see ":help option-list" and ":options".
