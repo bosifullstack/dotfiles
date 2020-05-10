@@ -14,6 +14,7 @@ CAPSLOCK KEY - Don't forget to put it as a Hyper key, configuring other keys to 
 - [Todoist CLI](https://github.com/sachaos/todoist)
 - [Spotify CLI](https://github.com/Rigellute/spotify-tui)
 - [Grip - Markdown Preview](https://github.com/joeyespo/grip)
+- [GitHub CLI - gh](https://github.com/cli/cli)
 
 ### Search engines
 
