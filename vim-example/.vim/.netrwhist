@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/bosifullstack/Documentos/Trabalho/Programacao/lumaHealth/web-app-npm/src/components/AppSideMenu'
-let g:netrw_dirhist_2='/home/bosifullstack'
-let g:netrw_dirhist_3='/home/bosifullstack/Documentos/Trabalho/Programacao/lumaHealth/web-app-npm/src/components/AppSideMenu'
-let g:netrw_dirhist_4='/home/bosifullstack/Documentos/Trabalho/Programacao/lumaHealth/web-app-npm/src/components/BillingAlert'
-let g:netrw_dirhist_5='/home/bosifullstack/Documentos/Trabalho/Programacao/lumaHealth/web-app-npm/src/components'
-let g:netrw_dirhist_6='/home/bosifullstack/Documentos/Trabalho/Programacao/lumaHealth/web-app-npm/src'
-let g:netrw_dirhist_7='/home/bosifullstack/Documentos/Trabalho/Programacao/lumaHealth/web-app-npm/src/components/ViewSelector'
-let g:netrw_dirhist_8='/home/bosifullstack/Documentos/Trabalho/Programacao/FrontEnd/startpage/src'
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/fbosi/study/vim/Mastering-Vim/Chapter02'
+let g:netrw_dirhist_2='/home/fbosi/study/vim'
+let g:netrw_dirhist_1='/home/fbosi/texts/literature/shortStories'
