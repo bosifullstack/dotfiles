@@ -25,3 +25,5 @@ gacp () {
   git commit -m "$1"
   gp
 }
+
+alias pdf='evince'

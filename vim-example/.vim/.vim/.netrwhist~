@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/bosifullstack/Documentos/Trabalho/Programacao/phidelis/phidelis-vue/utils'
-let g:netrw_dirhist_2='/home/bosifullstack/Documentos/Estudos/vim/CODES'
-let g:netrw_dirhist_3='/home/bosifullstack/Documentos/Estudos/vim'

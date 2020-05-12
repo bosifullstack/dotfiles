@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/bosifullstack/wordpress/alura/wp-content/themes/alura/assets/css'
-let g:netrw_dirhist_2='/home/bosifullstack/wordpress/alura/wp-content/themes/alura'
-let g:netrw_dirhist_3='/home/bosifullstack/wordpress/alura/wp-content/themes'
-let g:netrw_dirhist_4='/home/bosifullstack/wordpress/alura/wp-content/themes/alura'
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/fbosi'
+let g:netrw_dirhist_8='/home/fbosi/texts'
+let g:netrw_dirhist_7='/home/fbosi/texts/.git'
+let g:netrw_dirhist_6='/home/fbosi/texts'
+let g:netrw_dirhist_5='/home/fbosi'
+let g:netrw_dirhist_4='/home/fbosi/texts'
+let g:netrw_dirhist_3='/home/fbosi/study/vim/Mastering-Vim/Chapter02'
+let g:netrw_dirhist_2='/home/fbosi/study/vim'
+let g:netrw_dirhist_1='/home/fbosi/texts/literature/shortStories'

@@ -89,12 +89,6 @@ let g:netrw_browse_split = 2
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
 
-" Configuring keys to change the way we switch between panels
-noremap <c-j> <c-w><c-j>
-noremap <c-h> <c-w><c-h>
-noremap <c-k> <c-w><c-k>
-noremap <c-l> <c-w><c-l>
-
 " Setting Omni completion on
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -104,7 +98,6 @@ set noswapfile
 
 " Setting folding by indent
 set foldmethod=indent
-
 
 " Remaping alt key to move lines
 nnoremap <c-down> :m .+1<CR>==
@@ -116,5 +109,10 @@ vnoremap <c-Up> :m '<-2<CR>gv=gv
 
 " Clear highlights
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
-"
+
+" Adding a shortcut to Netrw navigator
+nnoremap <c-a> :Lex<CR>
+inoremap <c-a> <Esc>:Lex<CR>
+vnoremap <c-a> <Esc>:Lex<CR>
+
 " For more options see ":help option-list" and ":options".
