@@ -111,8 +111,8 @@ vnoremap <c-Up> :m '<-2<CR>gv=gv
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " Adding a shortcut to Netrw navigator
-nnoremap <c-a> :Lex<CR>
-inoremap <c-a> <Esc>:Lex<CR>
-vnoremap <c-a> <Esc>:Lex<CR>
+nnoremap <c-a> :Vex<CR>
+inoremap <c-a> <Esc>:Vex<CR>
+vnoremap <c-a> <Esc>:Vex<CR>
 
 " For more options see ":help option-list" and ":options".
