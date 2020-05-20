@@ -108,3 +108,4 @@ source ~/dotfiles/aliases
 alias luma='cd ~/Local\ Sites/lumahealth-2019/app/public'
 alias lumatheme='cd ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2'
 alias work='cd ~/work'
+alias lumasass='sass ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/assets/sass/style.scss ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/css/style2.css'
