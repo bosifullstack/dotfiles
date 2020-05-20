@@ -27,3 +27,4 @@ gacp () {
 }
 
 alias pdf='evince'
+alias cl='clear'
