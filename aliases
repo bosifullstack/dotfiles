@@ -1,6 +1,13 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias cd='clear && cd'
+alias downloads='cd ~/Downloads && ls'
+
+ccd() {
+    mkdir -p -- "${1:?No target specified}" &&
+    cd -- "$1"
+}
 
 alias ga='git add .'
 alias gap='git add -p'
@@ -10,6 +17,7 @@ alias gcc='git checkout'
 alias gp='git push'
 alias gs='git status'
 alias gl='git log'
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gb='git branch'
 alias gac='ga && gc'
 
@@ -28,3 +36,11 @@ gacp () {
 
 alias pdf='evince'
 alias cl='clear'
+
+alias pac='pacman -Syu'
+alias :q="exit"
+
+alias bc='bc -l'
+alias v='vim'
+
+alias nis='npm install --save'
