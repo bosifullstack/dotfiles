@@ -37,7 +37,7 @@ gacp () {
 alias pdf='evince'
 alias cl='clear'
 
-alias pac='pacman -Syu'
+alias pac='sudo pacman -Syu'
 alias :q="exit"
 
 alias bc='bc -l'
