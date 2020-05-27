@@ -6,6 +6,14 @@
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
 syntax on
 
 " Save 1,000 items in history
@@ -28,9 +36,6 @@ set hlsearch
 
 " Enable incremental searching
 set incsearch
-
-" Ignore case when searching
-set ignorecase
 
 " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set smartcase
