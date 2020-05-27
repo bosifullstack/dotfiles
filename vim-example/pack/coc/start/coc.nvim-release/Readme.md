@@ -1,168 +1,64 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                 Sample vimrc                                 "
-"                                                                              "
-"                                 Provided by:                                 "
-"                           LinuxTrainingAcademy.com                           "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+<p align="center">
+  <a href="https://www.vim.org/scripts/script.php?script_id=5779">
+    <img alt="Coc Logo" src="https://user-images.githubusercontent.com/251450/55009068-f4ed2780-501c-11e9-9a3b-cf3aa6ab9272.png" height="160" />
+  </a>
+  <p align="center">Make your Vim/Neovim as smart as VSCode.</p>
+  <p align="center">
+    <a href="/LICENSE.md"><img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"></a>
+    <a href="https://salt.bountysource.com/teams/coc-nvim"><img alt="Bountysource" src="https://img.shields.io/bountysource/team/coc-nvim/activity.svg?style=flat-square"></a>
+    <a href="https://github.com/neoclide/coc.nvim/actions"><img alt="Actions" src="https://github.com/neoclide/coc.nvim/workflows/coc.nvim%20CI/badge.svg?style=flat-square"></a>
+    <a href="/doc/coc.txt"><img alt="Doc" src="https://img.shields.io/badge/doc-%3Ah%20coc.txt-brightgreen.svg?style=flat-square"></a>
+    <a href="https://gitter.im/neoclide/coc.nvim"><img alt="Gitter" src="https://img.shields.io/gitter/room/neoclide/coc.nvim.svg?style=flat-square"></a>
+  </p>
+</p>
 
-syntax on
+---
 
-" Save 1,000 items in history
-set history=1000
+Coc is an intellisense engine for Vim/Neovim.
 
-" Show the line and column number of the cursor position
-set ruler
+<img alt="Gif" src="https://user-images.githubusercontent.com/251450/55285193-400a9000-53b9-11e9-8cff-ffe4983c5947.gif" width="60%" />
 
-" Display the incomplete commands in the bottom right-hand side of your screen.  
-set showcmd
+_True snippet and additional text editing support_
 
-" Display completion matches on your status line
-set wildmenu
+Check out [Wiki](https://github.com/neoclide/coc.nvim/wiki), and
+[doc/coc.txt](doc/coc.txt) for the Vim interface.
 
-" Show a few lines of context around the cursor
-set scrolloff=5
+## Quick Start
 
-" Highlight search matches
-set hlsearch
+Install [nodejs](https://nodejs.org/en/download/) when necessary:
 
-" Enable incremental searching
-set incsearch
+```sh
+curl -sL install-node.now.sh/lts | bash
+```
 
-" Ignore case when searching
-set ignorecase
+For [vim-plug](https://github.com/junegunn/vim-plug) users:
 
-" Override the 'ignorecase' option if the search pattern contains upper case characters.
-set smartcase
+```vim
+" Use release branch (Recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Turn on line numbering
-set number
+" Or build from source code by use yarn: https://yarnpkg.com
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+```
 
-" Don't line wrap mid-word.
-set lbr
+in your `.vimrc` or `init.vim`, then restart Vim and run `:PlugInstall`.
 
-" Copy the indentation from the current line.
-set autoindent
+Checkout [Install
+coc.nvim](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim) Wiki for
+more info.
 
-" Use spaces instead of tabs
-set expandtab
+**Note**: The first time building from source code may be slow.
 
-" Enable smart tabs
-set smarttab
+## Example vim configuration
 
-" Make a tab equal to 4 spaces
-set shiftwidth=2
-set tabstop=2
+Configuration is required to make coc.nvim easier to work with, since it
+doesn't change your key-mappings or Vim options. This is done as much as
+possible to avoid conflict with your other plugins.
 
-" Tell vim what background you are using
-set bg=dark
+**❗️Important**: Some Vim plugins could change key mappings. Please use
+`:verbose imap <tab>` to make sure that your keymap has taken effect.
 
-" Map Y to act like D and C, i.e. yank until EOL, rather than act like yy
-" map Y y$
-
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
-" Easily create HTML unorded lists. 
-map <F2> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
-map <F3> <Esc>o<li></li><Esc>cit
-
-" Seting a color theme
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='soft'
-colorscheme gruvbox
-
-" Starting vim pathogen
-execute pathogen#infect()
-syntax on
-
-"Configuration to make the lightline plugin work
-set laststatus=2
-
-"Removing the show note bellow since I'm using lightline
-set noshowmode
-
-" Configurations for Netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 15
-
-" Setting Omni completion on
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
-" Removing the swap files
-set noswapfile
-
-" Setting folding by indent
-set foldmethod=indent
-
-" Fast split navigation with <Ctrl> + hjkl.
-" Fast split navigation with <Ctrl> + hjkl.
-noremap <c-h> <c-w>h
-noremap <c-j> <c-w>j
-noremap <c-k> <c-w>k
-noremap <c-l> <c-w>l
-
-nnoremap <c-t> :vsplit<CR>==
-
-" Remaping alt key to move lines
-nnoremap <A-down> :m .+1<CR>==
-nnoremap <A-Up> :m .-2<CR>==
-inoremap <A-down> <Esc>:m .+1<CR>==gi
-inoremap <A-Up> <Esc>:m .-2<CR>==gi
-vnoremap <A-down> :m '>+1<CR>gv=gv
-vnoremap <A-Up> :m '<-2<CR>gv=gv
-
-" Clear highlights
-nnoremap <silent> <Esc><Esc> :let @/=""<CR>
-
-" Adding a shortcut to Netrw navigator
-nnoremap <c-a> :Lex<CR>
-inoremap <c-a> <Esc>:Lex<CR>
-vnoremap <c-a> <Esc>:Lex<CR>
-
-" Adding comand to load plugins help files
-packloadall
-silent! helptags ALL
-
-" Change default behavior for the j and k keys
-noremap <silent> k gk
-noremap <silent> j gj
-noremap <silent> 0 g0
-noremap <silent> $ g$
-" 
-" Use TAB to complete when typing words, else inserts TABs as usual.  Uses
-" dictionary, source files, and completor to find matching words to complete.
-
-" Note: usual completion is on <C-n> but more trouble to press all the time.
-" Never type the same word twice and maybe learn a new spellings!
-" Use the Linux dictionary when spelling is in doubt.
-function! Tab_Or_Complete() abort
-  " If completor is already open the `tab` cycles through suggested completions.
-  if pumvisible()
-    return "\<C-N>"
-  " If completor is not open and we are in the middle of typing a word then
-  " `tab` opens completor menu.
-  elseif col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^[[:keyword:][:ident:]]'
-    return "\<C-R>=completor#do('complete')\<CR>"
-  else
-    " If we aren't typing a word and we press `tab` simply do the normal `tab`
-    " action.
-    return "\<Tab>"
-  endif
-endfunction
-
-" Use `tab` key to select completions.  Default is arrow keys.
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Use tab to trigger auto completion.  Default suggests completions as you type.
-let g:completor_auto_trigger = 0
-inoremap <expr> <Tab> Tab_Or_Complete()
-
+```vim
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -182,7 +78,12 @@ set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-set signcolumn=yes
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -254,7 +155,7 @@ augroup end
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
-" Remap keys for applying codeAction to the current line.
+" Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
@@ -306,5 +207,35 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+```
 
-" For more options see ":help option-list" and ":options".
+## Articles
+
+- [coc.nvim 插件体系介绍](https://zhuanlan.zhihu.com/p/65524706)
+- [CocList 入坑指南](https://zhuanlan.zhihu.com/p/71846145)
+- [Create coc.nvim extension to improve Vim
+  experience](https://medium.com/@chemzqm/create-coc-nvim-extension-to-improve-vim-experience-4461df269173)
+
+## Trouble shooting
+
+Try these steps when you have problem with coc.nvim.
+
+- Make sure your Vim version >= 8.0 by command `:version`.
+- If service failed to start, use command `:CocInfo` or `:checkhealth` on Neovim.
+- Checkout the log of coc.nvim by command `:CocOpenLog`.
+- When you have issues with the language server, it's recommended to [checkout
+  the output](https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel).
+
+## Feedback
+
+- If you think Coc is useful, consider giving it a star.
+- If you have a question, [ask on gitter](https://gitter.im/neoclide/coc.nvim)
+- 中文用户请到 [中文 gitter](https://gitter.im/neoclide/coc-cn) 讨论
+- If something is not working, [create an
+  issue](https://github.com/neoclide/coc.nvim/issues/new).
+
+<img src="https://user-images.githubusercontent.com/251450/57566955-fb850200-7404-11e9-960f-711673f1a461.png" width="593" height="574">
+
+## License
+
+MIT
