@@ -6,6 +6,10 @@
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Adding the command :Prettier to reformat file
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Automatic toggle between relative line number and absolute
 :set number relativenumber
 
 :augroup numbertoggle
