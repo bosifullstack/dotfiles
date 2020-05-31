@@ -144,3 +144,11 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$PATH:~/dotfiles/scripts"
 source ~/dotfiles/aliases
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# aliases for the linux
+
+alias study='cd ~/study'
+alias front='cd ~/study/frontend'
+alias python='cd ~/study/python'
