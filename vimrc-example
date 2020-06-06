@@ -5,6 +5,8 @@
 "                           LinuxTrainingAcademy.com                           "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setting a new font for gui
+:set guifont=Hack\ 14
 
 " Adding the command :Prettier to reformat file
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
