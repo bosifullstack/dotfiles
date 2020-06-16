@@ -9,6 +9,9 @@
 :set guifont=Hack\ 18
 :set guifont=Hack-Regular:h18
 
+" Adding fzf
+set rtp+=/usr/local/opt/fzf
+
 " Adding the command :Prettier to reformat file
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
