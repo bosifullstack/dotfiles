@@ -330,11 +330,25 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Setting vplit to right
 :set splitright
 
-" Setting a function to initWork
+" Creating a function to initWork
 function! InitWork()
   :vsplit<CR>==
   :e ~/texts/todoList.md
   :terminal
 endfunction
 
+" Setting function InitWork to :Init
 command! -nargs=0 Init :call InitWork()
+
+" Creating a funtion to auto-start a journal entry
+function! InitJournalEntry()
+  let day = strftime("%y-%m-%d")
+  let filePath = "~/texts/journal/" . day . ".md"
+  execute "e " . filePath
+  let firstLine = "# " . day
+  execute "normal i" . firstLine
+  execute "normal o"
+endfunction
+
+" Setting function InitJournalEntry to :Journal
+command! -nargs=0 Journal :call InitJournalEntry()
