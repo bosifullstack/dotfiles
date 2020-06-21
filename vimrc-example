@@ -22,6 +22,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 syntax on
 
+" Map the leader key to a spacebar.
+let mapleader = "\<space>"
+
 " Save 100 items in history
 set history=100
 
