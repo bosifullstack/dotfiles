@@ -354,3 +354,8 @@ endfunction
 " Setting Allin function as a command
 command! -nargs=0 AllIn :call AllIn()
 
+" Map arrow keys nothing so I can get used to hjkl-style movement.
+ map <up> <nop>
+ map <down> <nop>
+ map <left> <nop>
+ map <right> <nop>
