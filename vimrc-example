@@ -89,8 +89,6 @@ let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='soft'
 colorscheme gruvbox
 
-" Starting vim pathogen
-execute pathogen#infect()
 syntax on
 
 "Configuration to make the lightline plugin work
