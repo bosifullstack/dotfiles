@@ -362,3 +362,7 @@ command! -nargs=0 AllIn :call AllIn()
  map <down> <nop>
  map <left> <nop>
  map <right> <nop>
+
+ " Remaping leader to Prettier and/ Format
+ nnoremap <leader>p :Prettier<CR>
+ nnoremap <leader>f :Format<CR>
