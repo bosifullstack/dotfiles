@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/fbosi/.vim/pack'
 let g:netrw_dirhist_6='/Users/fbosi/Local Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2'
 let g:netrw_dirhist_5='/Users/fbosi/Local Sites/lumahealth-2019/app/public/wp-content'
 let g:netrw_dirhist_4='/Users/fbosi'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/Users/fbosi/Local Sites/lumahealth-2019/app/public/wp-co
 let g:netrw_dirhist_0='/Users/fbosi/Local Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/template-parts'
 let g:netrw_dirhist_9='/Users/fbosi/Local Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2'
 let g:netrw_dirhist_8='/Users/fbosi/Local Sites/lumahealth-2019/app/public/wp-content/themes'
-let g:netrw_dirhist_7='/Users/fbosi/Local Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/assets/sass'

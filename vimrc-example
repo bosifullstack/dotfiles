@@ -6,10 +6,13 @@
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setting a new font for gui
-:set guifont=Hack\ 14
+set guifont=Hack\ 14
 
 " Making vim bash recognizes aliases
-:set shellcmdflag=-ic
+set shellcmdflag=-ic
+
+" Setting spell checking on
+set spell
 
 " Adding fzf
 set rtp+=/usr/local/opt/fzf
@@ -18,7 +21,7 @@ set rtp+=/usr/local/opt/fzf
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Automatic toggle between relative line number and absolute
-:set number relativenumber
+set number relativenumber
 
 :augroup numbertoggle
 :  autocmd!
@@ -80,10 +83,6 @@ set bg=dark
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Easily create HTML unorded lists. 
-map <F2> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
-map <F3> <Esc>o<li></li><Esc>cit
-
 " Seting a color theme
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='soft'
@@ -114,7 +113,6 @@ set noswapfile
 " Setting folding by indent
 set foldmethod=indent
 
-" Fast split navigation with <Ctrl> + hjkl.
 " Fast split navigation with <Ctrl> + hjkl.
 noremap <c-h> <c-w>h
 noremap <c-j> <c-w>j
@@ -246,9 +244,6 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -323,7 +318,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " For more options see ":help option-list" and ":options".
-"
 
 " Setting vplit to right
 :set splitright
