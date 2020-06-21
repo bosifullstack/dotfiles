@@ -322,9 +322,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Setting vplit to right
 :set splitright
 
-" Setting Goyo to autoload everytime I'm editing a Markdown file
-autocmd! filetype markdown packadd goyo | Goyo
-
 " Creating a function to initWork
 function! InitWork()
   :vsplit<CR>==
@@ -337,13 +334,23 @@ command! -nargs=0 Init :call InitWork()
 
 " Creating a funtion to auto-start a journal entry
 function! InitJournalEntry()
-  let day = strftime("%y-%m-%d")
+  let day = strftime("%Y-%m-%d")
   let filePath = "~/texts/journal/" . day . ".md"
   execute "e " . filePath
   let firstLine = "# " . day
   execute "normal i" . firstLine
-  execute "normal o"
+  execute "AllIn"
 endfunction
 
 " Setting function InitJournalEntry to :Journal
 command! -nargs=0 Journal :call InitJournalEntry()
+
+" Adding AllIn function to clear screen and help with concentration
+function! AllIn()
+  execute "packadd goyo"
+  execute "Goyo"
+endfunction
+
+" Setting Allin function as a command
+command! -nargs=0 AllIn :call AllIn()
+
