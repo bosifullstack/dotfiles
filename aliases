@@ -30,7 +30,7 @@ alias tdr='rmtodoist.sh'
 
 gacp () {
   ga
-  git commit -m "$1"
+  git commit -m "$1" -m "$2"
   gp
 }
 
