@@ -157,3 +157,4 @@ alias python='cd ~/study/python'
 
 alias text='cd ~/texts'
 alias reads='cd ~/texts/readings'
+alias literature='cd ~/texts/literature'
