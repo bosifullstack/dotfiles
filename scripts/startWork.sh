@@ -2,3 +2,4 @@
 
 cd ~/texts
 git pull
+cd -
