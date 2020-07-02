@@ -154,3 +154,6 @@ alias front='cd ~/study/frontend'
 alias back='cd ~/study/backend'
 alias games='cd ~/study/gameDev'
 alias python='cd ~/study/python'
+
+alias text='cd ~/texts'
+alias reads='cd ~/texts/readings'
