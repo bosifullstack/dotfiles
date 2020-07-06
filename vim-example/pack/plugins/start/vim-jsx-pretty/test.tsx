@@ -2,8 +2,6 @@ import React from 'react';
 
 const head = <T>(arr: T[]): T => arr[0]
 
-const text = <Text>hello, world</Text>;
-
 const f = (
   <div>
     {/* this is a comment string */}

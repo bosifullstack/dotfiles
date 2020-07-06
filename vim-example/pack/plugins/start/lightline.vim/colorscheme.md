@@ -22,7 +22,7 @@
 
 ### PaperColor light
 
-![lightline.vim - PaperColor light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/PaperColor_light.png)
+![lightline.vim - PaperColor light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/PaperColor.png)
 
 ### Tomorrow
 
@@ -52,10 +52,6 @@
 
 ![lightline.vim - ayu light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/ayu_light.png)
 
-### ayu_dark
-
-![lightline.vim - ayu dark](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/ayu_dark.png)
-
 ### darcula
 
 ![lightline.vim - darcula](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/darcula.png)
@@ -72,25 +68,13 @@
 
 ![lightline.vim - selenized dark](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/selenized_dark.png)
 
-### selenized black
-
-![lightline.vim - selenized black](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/selenized_black.png)
-
-### selenized light
-
-![lightline.vim - selenized light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/selenized_light.png)
-
-### selenized white
-
-![lightline.vim - selenized white](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/selenized_white.png)
-
 ### solarized dark
 
-![lightline.vim - solarized dark](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/solarized_dark.png)
+![lightline.vim - solarized_dark](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/solarized_dark.png)
 
 ### solarized light
 
-![lightline.vim - solarized light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/solarized_light.png)
+![lightline.vim - solarized_light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/solarized_light.png)
 
 ### materia
 
@@ -112,13 +96,9 @@
 
 ![lightline.vim - seoul256](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/seoul256.png)
 
-### one dark
+### one
 
-![lightline.vim - one dark](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/one_dark.png)
-
-### one light
-
-![lightline.vim - one light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/one_light.png)
+![lightline.vim - one](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/one.png)
 
 ### srcery_drk
 
@@ -132,10 +112,6 @@
 
 ![lightline.vim - landscape](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/landscape.png)
 
-### 16color dark
+### 16color
 
-![lightline.vim - 16color dark](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/16color_dark.png)
-
-### 16color light
-
-![lightline.vim - 16color light](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/16color_light.png)
+![lightline.vim - 16color](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/16color.png)
