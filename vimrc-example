@@ -8,6 +8,11 @@
 " Setting a new font for gui
 set guifont=Hack\ 14
 
+" Stoping vim from creating swp files
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Making vim bash recognizes aliases
 set shellcmdflag=-ic
 
