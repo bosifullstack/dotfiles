@@ -1,6 +1,6 @@
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias ..='cd .. && clear && ls'
+alias ...='cd ../.. && clear && ls'
+alias ....='cd ../../.. && clear && ls'
 alias cd='clear && cd'
 alias downloads='cd ~/Downloads && ls'
 
@@ -35,7 +35,7 @@ gacp () {
 }
 
 alias pdf='evince'
-alias cl='clear'
+alias x='clear && ls'
 
 alias pac='sudo pacman -Syu'
 alias :q="exit"
