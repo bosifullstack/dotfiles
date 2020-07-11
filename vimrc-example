@@ -5,9 +5,6 @@
 "                           LinuxTrainingAcademy.com                           "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setting a new font for gui
-set guifont=Hack\ 14
-
 " Stoping vim from creating swp files
 set nobackup
 set nowritebackup
@@ -25,22 +22,17 @@ set rtp+=/usr/local/opt/fzf
 " Adding the command :Prettier to reformat file
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-syntax on
-
 " Map the leader key to point
 let mapleader = "."
 
-" Save 100 items in history
-set history=100
+" Save 20 items in history
+set history=20
 
 " Show the line and column number of the cursor position
 set ruler
 
 " Display the incomplete commands in the bottom right-hand side of your screen.  
 set showcmd
-
-" Always display a status line (it gets hidden sometimes otherwise).
- set laststatus=2
 
 " Display completion matches on your status line
 set wildmenu
@@ -79,9 +71,6 @@ set tabstop=2
 " Tell vim what background you are using
 set bg=dark
 
-" Map Y to act like D and C, i.e. yank until EOL, rather than act like yy
-" map Y y$
-
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
@@ -97,13 +86,6 @@ set laststatus=2
 
 "Removing the show note bellow since I'm using lightline
 set noshowmode
-
-" Configurations for Netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 15
 
 " Setting Omni completion on
 filetype plugin on
@@ -169,10 +151,6 @@ inoremap <expr> <Tab> Tab_Or_Complete()
 
 " TextEdit might fail if hidden is not set.
 set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -289,13 +267,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" For more options see ":help option-list" and ":options".
-
 " Setting vplit to right
 :set splitright
 
@@ -303,6 +274,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 function! InitWork()
   :vsplit<CR>==
   :e ~/texts/todoList.md
+  :term
 endfunction
 
 " Setting function InitWork to :Init
