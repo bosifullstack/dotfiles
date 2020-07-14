@@ -10,6 +10,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+set guifont=Hack\ 14
+
 " Making vim bash recognizes aliases
 set shellcmdflag=-ic
 
