@@ -1,0 +1,9 @@
+g:merginal_logCommitCount	merginal.txt	/*g:merginal_logCommitCount*
+g:merginal_splitType	merginal.txt	/*g:merginal_splitType*
+g:merginal_windowSize	merginal.txt	/*g:merginal_windowSize*
+g:merginal_windowWidth	merginal.txt	/*g:merginal_windowWidth*
+merginal	merginal.txt	/*merginal*
+merginal-configuration	merginal.txt	/*merginal-configuration*
+merginal-requirements	merginal.txt	/*merginal-requirements*
+merginal-usage	merginal.txt	/*merginal-usage*
+merginal.txt	merginal.txt	/*merginal.txt*

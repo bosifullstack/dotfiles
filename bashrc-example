@@ -149,6 +149,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # aliases for the linux
 
+alias work='cd ~/work'
+
 alias study='cd ~/study'
 alias front='cd ~/study/frontend'
 alias back='cd ~/study/backend'
@@ -158,3 +160,13 @@ alias python='cd ~/study/python'
 alias text='cd ~/texts'
 alias reads='cd ~/texts/readings'
 alias literature='cd ~/texts/literature'
+
+
+# luma aliases
+alias luma='cd ~/Local\ Sites/lumahealth-2019/app/public'
+alias lumatheme='cd ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2'
+alias lumasass='sass ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/assets/sass/style.scss ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/css/style2.css'
+
+# Make git branch appear on terminal
+
+PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \w\[\033[0;32m\] - [$(git branch 2>/dev/null | grep "^*" | colrm 1 2)\[\033[0;32m\]]\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\]\[\033[0m\] '
