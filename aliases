@@ -1,13 +1,20 @@
 alias ..='cd .. && clear && ls'
 alias ...='cd ../.. && clear && ls'
 alias ....='cd ../../.. && clear && ls'
-alias cd='clear && cd'
 alias downloads='cd ~/Downloads && ls'
 
 ccd() {
     mkdir -p -- "${1:?No target specified}" &&
     cd -- "$1"
 }
+
+cdls() {
+  cd "$1"
+  clear
+  ls
+}
+
+alias cd='cdls'
 
 alias ga='git add .'
 alias gap='git add -p'
