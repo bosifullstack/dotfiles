@@ -1,8 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                 Sample vimrc                                 "
-"                                                                              "
-"                                 Provided by:                                 "
-"                           LinuxTrainingAcademy.com                           "
+"                              Felipe's Bosi vimrc                             "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Stoping vim from creating swp files
@@ -10,7 +7,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set guifont=Hack\ 14
+set guifont=Hack\ 12
 
 " Making vim bash recognizes aliases
 set shellcmdflag=-ic
@@ -29,9 +26,6 @@ let mapleader = "."
 
 " Save 20 items in history
 set history=20
-
-" Show the line and column number of the cursor position
-set ruler
 
 " Display the incomplete commands in the bottom right-hand side of your screen.  
 set showcmd
@@ -53,6 +47,7 @@ set smartcase
 
 " Turn on line numbering
 set relativenumber
+set number
 
 " Don't line wrap mid-word.
 set lbr
@@ -89,10 +84,6 @@ set laststatus=2
 "Removing the show note bellow since I'm using lightline
 set noshowmode
 
-" Setting Omni completion on
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
 " Fast split navigation with <Ctrl> + hjkl.
 noremap <c-h> <c-w>h
 noremap <c-j> <c-w>j
@@ -105,16 +96,12 @@ nnoremap <c-t> :vsplit<CR>==
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " Adding a shortcut to Tagbar
-nnoremap <leader>a :TagbarToggle<CR>
+nnoremap <c-c> :TagbarToggle<CR>
 
 " Adding a shortcut to FZF
 nnoremap <c-a> :FZF<CR>
 inoremap <c-a> <Esc>:FZF<CR>
 vnoremap <c-a> <Esc>:FZF<CR>
-
-" Adding comand to load plugins help files
-packloadall
-silent! helptags ALL
 
 " Change default behavior for the j and k keys
 noremap <silent> k gk
