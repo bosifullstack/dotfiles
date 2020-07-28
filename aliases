@@ -1,11 +1,13 @@
 alias ..='cd .. && clear && ls'
 alias ...='cd ../.. && clear && ls'
 alias ....='cd ../../.. && clear && ls'
-alias downloads='cd ~/Downloads && ls'
+alias downloads='cd ~/Downloads && clear && ls'
+alias dotfiles='cd ~/dotfiles && clear && ls'
 
 ccd() {
     mkdir -p -- "${1:?No target specified}" &&
     cd -- "$1"
+    clear
 }
 
 cdls() {
@@ -27,6 +29,7 @@ alias gl='git log'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gb='git branch'
 alias gac='ga && gc'
+alias gitsub='git submodule update --init --recursive'
 
 alias rmall='yes | rm -r'
 
