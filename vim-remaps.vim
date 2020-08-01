@@ -1,4 +1,3 @@
-
 " Map the leader key to point
 let mapleader = "."
 
@@ -37,3 +36,7 @@ noremap <silent> k gk
 noremap <silent> j gj
 noremap <silent> 0 g0
 noremap <silent> $ g$
+
+" Searchs remaps
+nnoremap s /
+nnoremap <c-s> ?
