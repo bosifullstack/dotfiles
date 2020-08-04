@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "barra",
+    "description": "up",
     "store": {},
     "modes": [
         3
@@ -18,7 +18,9 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [],
+        "modifiers": [
+            "<hyper>"
+        ],
         "hotKey": "<up>"
     },
     "filter": {
