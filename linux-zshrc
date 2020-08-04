@@ -71,18 +71,9 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   colored-man-pages
-  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 export EDITOR='vim'
 
 # Compilation flags
@@ -110,9 +101,3 @@ alias python='cd ~/study/python'
 alias text='cd ~/texts'
 alias reads='cd ~/texts/readings'
 alias literature='cd ~/texts/literature'
-
-
-# luma aliases
-alias luma='cd ~/Local\ Sites/lumahealth-2019/app/public'
-alias lumatheme='cd ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2'
-alias lumasass='sass ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/assets/sass/style.scss ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/css/style2.css'
