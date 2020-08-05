@@ -1,4 +1,4 @@
-" Remaping leader to Prettier and/ Format
+" Remaping leader to Prettier and/ Format - Steam
 nnoremap .p :Prettier<CR>
 nnoremap .f :Format<CR>
 
