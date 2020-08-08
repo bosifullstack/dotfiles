@@ -2,23 +2,18 @@
 nnoremap .p :Prettier<CR>
 nnoremap .f :Format<CR>
 
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
-" Map arrow keys nothing so I can get used to hjkl-style movement.
-nnoremap <up> <c-u>
-nnoremap <down> <c-d>
-nnoremap <left> {
-nnoremap <right> }
-
 " Fast split navigation with <Ctrl> + hjkl.
 noremap <c-h> <c-w>h
 noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
 
-" Remat to vertical split
-nnoremap <c-t> :vsplit<CR>==
+" Remat to vertical split and horizontal split
+nnoremap gv :vsplit<CR>==
+nnoremap gh :split<CR>==
+
+" Remat to create new tab
+nnoremap <c-t> :tabnew<CR>==
 
 " Adding a shortcut to Tagbar
 nnoremap <c-c> :TagbarToggle<CR>

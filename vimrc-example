@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                              Felipe's Bosi vimrc                             "
+"                              Felipe's Bosi vimrc                             " 
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -37,10 +37,6 @@ set history=20
 
 " Display the incomplete commands in the bottom right-hand side of your screen.  
 set showcmd
-
-
-" Show a few lines of context around the cursor
-set scrolloff=5
 
 " Highlight search matches
 set hlsearch

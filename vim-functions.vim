@@ -2,7 +2,6 @@
 function! InitWork()
   :vsplit<CR>==
   :e ~/texts/todoList.md
-  :term
 endfunction
 
 " Setting function InitWork to :Init
