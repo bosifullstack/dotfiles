@@ -1,8 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Make Manjaro Gnome terminal open tab on same folder
+source /etc/profile.d/vte.sh
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/fbosi/.oh-my-zsh"
+
+# Change language to pt-br to accept accents
+export LANG=pt_BR.utf8
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,9 +77,18 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   colored-man-pages
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
 export EDITOR='vim'
 
 # Compilation flags
@@ -83,7 +98,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$PATH:~/dotfiles/scripts"
+export PATH="$HOME/dotfiles/scripts:$PATH"
 source ~/dotfiles/aliases
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -101,3 +116,10 @@ alias python='cd ~/study/python'
 alias text='cd ~/texts'
 alias reads='cd ~/texts/readings'
 alias literature='cd ~/texts/literature'
+alias wordpress='cd ~/Local\ Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress'
+
+
+# luma aliases
+alias luma='cd ~/Local\ Sites/lumahealth-2019/app/public'
+alias lumatheme='cd ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2'
+alias lumasass='sass ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/assets/sass/style.scss ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/css/style2.css'
