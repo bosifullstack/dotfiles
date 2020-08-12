@@ -2,6 +2,8 @@
 function! InitWork()
   :vsplit<CR>==
   :e ~/texts/todoList.md
+  :vsplit<CR>==
+  :e ~/texts/workTodoList.md
 endfunction
 
 " Setting function InitWork to :Init
