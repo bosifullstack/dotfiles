@@ -16,17 +16,7 @@ function! InitJournalEntry()
   execute "e " . filePath
   let firstLine = "# " . day
   execute "normal i" . firstLine
-  execute "AllIn"
 endfunction
 
 " Setting function InitJournalEntry to :Journal
 command! -nargs=0 Journal :call InitJournalEntry()
-
-" Adding AllIn function to clear screen and help with concentration
-function! AllIn()
-  execute "packadd goyo"
-  execute "Goyo"
-endfunction
-
-" Setting Allin function as a command
-command! -nargs=0 AllIn :call AllIn()
