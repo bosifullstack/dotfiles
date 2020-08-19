@@ -11,9 +11,6 @@ set noswapfile
 " Adding mouse support to vim
 set mouse=a
 
-" enter the current millenium - No vi compatible
-set nocompatible
-
 " Display completion matches on your status line
 set wildmenu
 
