@@ -8,15 +8,21 @@ noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
 
-" Remat to vertical split and horizontal split
+" Remap to vertical split and horizontal split
 nnoremap gv :vsplit<CR>==
 nnoremap gh :split<CR>==
 
-" Remat to create new tab
+" Remap to create new tab
 nnoremap <c-t> :tabnew<CR>==
 
+" Remap to add a ctrl-c and ctrl-v
+nnoremap <c-c> "+yy
+nnoremap <c-v> "+p
+vnoremap <c-c> "+y
+vnoremap <c-v> "+p
+
 " Adding a shortcut to Tagbar
-nnoremap <c-c> :TagbarToggle<CR>
+nnoremap <c-s> :TagbarToggle<CR>
 
 " Adding a shortcut to FZF
 nnoremap <c-a> :FZF<CR>
