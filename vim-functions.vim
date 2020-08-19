@@ -1,9 +1,9 @@
 " Creating a function to initWork
 function! InitWork()
-  :vsplit<CR>==
   :e ~/texts/todoList.md
   :vsplit<CR>==
   :e ~/texts/workTodoList.md
+  :term
 endfunction
 
 " Setting function InitWork to :Init
