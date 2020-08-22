@@ -1,32 +1,31 @@
 {
-    "type": "script",
-    "description": "a + til",
-    "store": {},
+    "type": "phrase",
+    "description": "a com til",
     "modes": [
-        3
+        1
     ],
-    "usageCount": 19,
+    "usageCount": 15,
     "prompt": false,
     "omitTrigger": false,
-    "showInTrayMenu": false,
+    "matchCase": false,
+    "showInTrayMenu": true,
     "abbreviation": {
         "abbreviations": [
-            "~a"
+            "aa"
         ],
         "backspace": true,
         "ignoreCase": false,
-        "immediate": true,
-        "triggerInside": true,
+        "immediate": false,
+        "triggerInside": false,
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<hyper>"
-        ],
-        "hotKey": "a"
+        "modifiers": [],
+        "hotKey": null
     },
     "filter": {
         "regex": null,
         "isRecursive": false
-    }
+    },
+    "sendMode": "kb"
 }

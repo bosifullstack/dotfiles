@@ -1,29 +1,23 @@
 {
     "type": "script",
-    "description": "a + til",
+    "description": "Esc",
     "store": {},
-    "modes": [
-        3
-    ],
-    "usageCount": 19,
+    "modes": [],
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
     "abbreviation": {
-        "abbreviations": [
-            "~a"
-        ],
+        "abbreviations": [],
         "backspace": true,
         "ignoreCase": false,
-        "immediate": true,
-        "triggerInside": true,
+        "immediate": false,
+        "triggerInside": false,
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<hyper>"
-        ],
-        "hotKey": "a"
+        "modifiers": [],
+        "hotKey": null
     },
     "filter": {
         "regex": null,
