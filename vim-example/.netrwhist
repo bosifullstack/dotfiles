@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/fbosi'
 let g:netrw_dirhist_7='/home/fbosi/Local Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress/cypress/integration'
 let g:netrw_dirhist_6='/home/fbosi/Local Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress/cypress'
 let g:netrw_dirhist_5='/home/fbosi/dotfiles/scripts'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_2='/home/fbosi/work/appstone-app'
 let g:netrw_dirhist_1='/home/fbosi/texts/literature/poetry'
 let g:netrw_dirhist_0='/home/fbosi/.vim/pack/plugins/start/vim-commenter'
 let g:netrw_dirhist_9='/home/fbosi/.vim/pack/plugins/start/ack.vim'
-let g:netrw_dirhist_8='/home/fbosi/dotfiles/vim-example/pack/plugins/start/tpope'
