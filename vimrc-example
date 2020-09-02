@@ -19,7 +19,7 @@ Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
 
 " Traces.vim do not work with
-"Plug 'https://github.com/markonm/traces.vim.git'
+Plug 'https://github.com/markonm/traces.vim.git'
 call plug#end()
 
 set mouse=a
@@ -335,6 +335,6 @@ nnoremap gU <nop>
 
 " Remap netwr
 
-nnoremap <leader>e :E<CR>
-inoremap <leader>e <ESC>:E<CR>
-vnoremap <leader>e <ESC>:E<CR>
+nnoremap <leader>e :Explore<CR>
+inoremap <leader>e <ESC>:Explore<CR>
+vnoremap <leader>e <ESC>:Explore<CR>
