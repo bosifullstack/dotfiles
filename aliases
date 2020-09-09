@@ -51,7 +51,7 @@ alias pac='sudo pacman -Syu'
 alias :q="exit"
 
 alias bc='bc -l'
-alias v='vim'
+alias v='nvim'
 
 alias n='npm'
 alias nr='npm run'
