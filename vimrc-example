@@ -18,6 +18,7 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
 Plug 'wellle/context.vim'
+Plug   'eugen0329/vim-esearch'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
@@ -290,6 +291,7 @@ command! -nargs=1 ReactF :call ReactFunctionComponent(<f-args>)
 
 """"""""""""Remaps
 " Remaping leader to Prettier and/ Format - Steam
+nnoremap <leader>f :Format<CR>
 nnoremap <leader>p :Prettier<CR>
 
 " Fast split navigation with <Ctrl> + hjkl.
