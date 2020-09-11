@@ -340,3 +340,10 @@ nnoremap gU <nop>
 nnoremap <leader>e :Explore<CR>
 inoremap <leader>e <ESC>:Explore<CR>
 vnoremap <leader>e <ESC>:Explore<CR>
+
+" Easy compile java in vim with <leader>m
+autocmd FileType java set makeprg=javac\ %
+set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C.%#
+nnoremap <leader>m :make<CR>
+nnoremap <leader>n :!mvn package<CR>
+
