@@ -17,8 +17,7 @@ Plug 'https://github.com/easymotion/vim-easymotion.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
-Plug 'wellle/context.vim'
-Plug   'eugen0329/vim-esearch'
+Plug 'eugen0329/vim-esearch'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
