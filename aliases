@@ -60,3 +60,5 @@ alias nisd='npm install --save-dev'
 alias run='npm run start:stage'
 
 alias wordpress='cd ~/Local Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress'
+
+alias vj='nvim ~/texts/vim-journal.md'
