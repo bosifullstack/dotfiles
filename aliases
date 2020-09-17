@@ -28,6 +28,7 @@ alias gpp='git pull'
 alias gs='git status'
 alias gl='git log'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glb="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %n %n %b %n ' --abbrev-commit"
 alias gb='git branch'
 alias gac='ga && gc'
 alias gitsub='git submodule update --init --recursive'
@@ -41,7 +42,7 @@ alias tdr='rmtodoist.sh'
 
 gacp () {
   ga
-  git commit -m "$1"
+  git commit
   gp
 }
 
