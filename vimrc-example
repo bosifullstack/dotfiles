@@ -19,6 +19,8 @@ Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
 Plug 'eugen0329/vim-esearch'
 Plug 'https://github.com/terryma/vim-expand-region.git'
+" Vim-be-good game
+Plug 'ThePrimeagen/vim-be-good'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
@@ -58,8 +60,8 @@ set incsearch
 " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set smartcase
 
-" Turn on line numbering
-set number
+" Turn on relative line numbering
+set relativenumber
 
 " Don't line wrap mid-word.
 set lbr
@@ -322,12 +324,6 @@ nnoremap <leader>s :TagbarToggle<CR>
 nnoremap <c-a> :FZF<CR>
 inoremap <c-a> <Esc>:FZF<CR>
 vnoremap <c-a> <Esc>:FZF<CR>
-
-" Change default behavior for the j and k keys
-noremap <silent> k gk
-noremap <silent> j gj
-noremap <silent> 0 g0
-noremap <silent> $ g$
 
 " Removing change to lowercase from vim
 
