@@ -309,14 +309,6 @@ nnoremap <leader>h :split<CR>==
 " Remap to create new tab
 nnoremap <leader>t :tabnew<CR>==
 
-" Remap to add a ctrl-c and ctrl-v
-nnoremap <c-c> "+yy
-inoremap <c-c> <Esc>"+yy
-vnoremap <c-c> "+y
-nnoremap <c-v> "+p
-inoremap <c-v> <Esc>"+p
-vnoremap <c-v> "+p
-
 " Adding a shortcut to Tagbar
 nnoremap <leader>s :TagbarToggle<CR>
 
