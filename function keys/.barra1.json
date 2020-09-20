@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "a + crase",
+    "description": "barra",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 1,
+    "usageCount": 2,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -18,12 +18,8 @@
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<ctrl>",
-            "<hyper>",
-            "<shift>"
-        ],
-        "hotKey": "a"
+        "modifiers": [],
+        "hotKey": "<up>"
     },
     "filter": {
         "regex": null,
