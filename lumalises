@@ -1,10 +1,28 @@
 gitcheckout () {
-  git checkout development
+  git checkout $1
   git pull --all
-  git checkout -b "$1/$2"
+  git checkout -b "$2/$3"
   git push --set-upstream origin "$1/$2"
 }
 
-alias "gitFeature"='gitcheckout feature'
-alias gffs='gitcheckout feature'
+gitOpenPR () {
+  taskType=$( git branch --show-current | grep '/.*' | cut -f 1 -d '/' )
+  taskID=$( git branch --show-current | grep '/.*' | cut -f 2 -d '/' | cut -f 1 -d '-' )
+
+  if [$taskType == "hotfix"];
+  then
+    gh pr create --base stage --web
+
+  else
+    gh pr create --base dev --web
+  fi
+}
+
+# creates a feature branch on local and remote
+alias "gitFeat"='gitcheckout dev feat'
+alias gffs='gitcheckout dev feat'
+
+# creates a hotfix branch on local and remote
+alias "gitHotfix"='gitcheckout stage hotfix'
+alias "ghf"='gitcheckout stage hotfix'
 
