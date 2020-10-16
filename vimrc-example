@@ -21,6 +21,7 @@ Plug 'eugen0329/vim-esearch'
 Plug 'https://github.com/terryma/vim-expand-region.git'
 " Vim-be-good game
 Plug 'ThePrimeagen/vim-be-good'
+Plug 'ThePrimeagen/vim-apm'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
@@ -99,16 +100,13 @@ set noshowmode
 
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
-" <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
 
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
 
 " Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
 
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
@@ -313,16 +311,9 @@ nnoremap <leader>t :tabnew<CR>==
 nnoremap <leader>s :TagbarToggle<CR>
 
 " Adding a shortcut to FZF
-nnoremap <c-a> :FZF<CR>
-inoremap <c-a> <Esc>:FZF<CR>
-vnoremap <c-a> <Esc>:FZF<CR>
-
-" Removing change to lowercase from vim
-
-vnoremap u <nop>
-xnoremap U <nop>
-nnoremap gu <nop>
-nnoremap gU <nop>
+nnoremap <leader>a :FZF<CR>
+inoremap <leader>a <Esc>:FZF<CR>
+vnoremap <leader>a <Esc>:FZF<CR>
 
 " Remap netwr
 
