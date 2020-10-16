@@ -13,7 +13,7 @@ gitOpenPR () {
   lastTag=$( gh release list -L 1 )
   lastTrainReleaseTag=$( echo $lastTag | cut -f 1 -d ".")
   nextTrainReleaseTag=$( expr 1 + $lastTrainReleaseTag )
-  lastIssueReleaseTag=$( echo $lastTag | cut -f 2 -d ".")
+  lastIssueReleaseTag=$( echo $lastTag | cut -f 2 -d "." | cut -f 1 -d$'\t')
   nextIssueReleaseTag=$( expr 1 + $lastIssueReleaseTag )
 
   if [[ $taskType == "hotfix" ]];
