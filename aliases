@@ -68,5 +68,5 @@ if [[ $OSTYPE == "darwin"* ]]
   alias run='npm run start:stage'
   
   else
-  alias v="nvim"
+  alias v="~/nvim.appimage"
 fi
