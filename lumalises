@@ -1,0 +1,10 @@
+gitcheckout () {
+  git checkout development
+  git pull --all
+  git checkout -b "$1/$2"
+  git push --set-upstream origin "$1/$2"
+}
+
+alias "gitFeature"='gitcheckout feature'
+alias gffs='gitcheckout feature'
+
