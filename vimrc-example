@@ -19,9 +19,6 @@ Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
 Plug 'eugen0329/vim-esearch'
 Plug 'https://github.com/terryma/vim-expand-region.git'
-" Vim-be-good game
-Plug 'ThePrimeagen/vim-be-good'
-Plug 'ThePrimeagen/vim-apm'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
@@ -229,7 +226,7 @@ augroup mygroup
 augroup end
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>cc  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
