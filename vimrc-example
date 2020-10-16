@@ -101,6 +101,10 @@ set noshowmode
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
+" <Leader>[{char} to move to {char}
+map  <Leader>[ <Plug>(easymotion-bd-f)
+nmap <Leader>[ <Plug>(easymotion-overwin-f)
+
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
 
@@ -214,11 +218,7 @@ function! s:show_documentation()
 endfunction
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>r <Plug>(coc-rename)
 
 augroup mygroup
   autocmd!
