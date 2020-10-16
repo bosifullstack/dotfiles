@@ -9,12 +9,12 @@ gitOpenPR () {
   taskType=$( git branch --show-current | grep '/.*' | cut -f 1 -d '/' )
   taskID=$( git branch --show-current | grep '/.*' | cut -f 2 -d '/' | cut -f 1 -d '-' )
 
-  if [$taskType == "hotfix"];
+  if [[ $taskType == "hotfix" ]];
   then
-    gh pr create --base stage --web
+    gh pr create --base stage --title "[$taskID]($taskType)" --web
 
   else
-    gh pr create --base dev --web
+    gh pr create --base dev --title "[$taskID]($taskType)" --web
   fi
 }
 
