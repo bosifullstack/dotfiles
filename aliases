@@ -70,5 +70,3 @@ if [[ $OSTYPE == "darwin"* ]]
   else
   alias v="nvim"
 fi
-
-source="./lumalises"
