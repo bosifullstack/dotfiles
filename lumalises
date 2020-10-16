@@ -6,17 +6,31 @@ gitcheckout () {
 }
 
 gitOpenPR () {
-  taskType=$( git branch --show-current | grep '/.*' | cut -f 1 -d '/' )
-  taskID=$( git branch --show-current | grep '/.*' | cut -f 2 -d '/' | cut -f 1 -d '-' )
+  currentBranch=$( git branch --show-current )
+  taskType=$( echo $currentBranch | grep '/.*' | cut -f 1 -d '/' )
+  taskID=$( echo $currentBranch | grep '/.*' | cut -f 2 -d '/' | cut -f 1 -d '-' )
+
+  lastTag=$( gh release list -L 1 )
+  lastTrainReleaseTag=$( echo $lastTag | cut -f 1 -d ".")
+  nextTrainReleaseTag=$( expr 1 + $lastTrainReleaseTag )
+  lastIssueReleaseTag=$( echo $lastTag | cut -f 2 -d ".")
+  nextIssueReleaseTag=$( expr 1 + $lastIssueReleaseTag )
 
   if [[ $taskType == "hotfix" ]];
   then
-    gh pr create --base stage --title "[$taskID]($taskType)" --web
+    gh pr create --base stage --title "[#$taskID]($taskType)" --web
+    gh release create --target "$currentBranch" "$lastTrainReleaseTag.$nextIssueReleaseTag"
 
+  elif [[ $currentBranch == "dev" ]];
+  then
+    gh pr create --base prod --title "Release $nextTrainReleaseTag.$nextIssueReleaseTag" --web
+    gh release create --target "$currentBranch" "$nextTrainReleaseTag.0"
   else
-    gh pr create --base dev --title "[$taskID]($taskType)" --web
+    gh pr create --base dev --title "[#$taskID]($taskType)" --web
   fi
 }
+
+alias gopr=gitOpenPR
 
 # creates a feature branch on local and remote
 alias "gitFeat"='gitcheckout dev feat'
