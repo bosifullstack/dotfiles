@@ -1,3 +1,6 @@
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias parrot='curl parrot.live'
+
 alias ..='cd .. && clear && ls'
 alias ...='cd ../.. && clear && ls'
 alias ....='cd ../../.. && clear && ls'
