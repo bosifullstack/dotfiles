@@ -43,8 +43,8 @@ set rtp+=/usr/local/opt/fzf
 " Adding the command :Prettier to reformat file
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-" Save 20 items in history
-set history=20
+" Save 100 items in history
+set history=100
 
 " Display the incomplete commands in the bottom right-hand side of your screen.  
 set showcmd
