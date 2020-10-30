@@ -1,0 +1,4 @@
+cookie-cache "~/.newsboat/cookies.txt"
+urls-source "newsblur"
+newsblur-login "bosifullstack"
+newsblur-password "Padrao@10"
