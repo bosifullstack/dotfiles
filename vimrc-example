@@ -98,12 +98,8 @@ set noshowmode
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
-" <Leader>[{char} to move to {char}
-map  <Leader>[ <Plug>(easymotion-bd-f)
-nmap <Leader>[ <Plug>(easymotion-overwin-f)
-
 " s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
+nmap <leader>s <Plug>(easymotion-overwin-f2)
 
 " Move to line
 map <Leader>l <Plug>(easymotion-bd-jk)
@@ -287,8 +283,11 @@ endfunction
 command! -nargs=1 ReactF :call ReactFunctionComponent(<f-args>)
 
 """"""""""""Remaps
+" Remap for CocAction
+nnoremap <leader>a :CocAction<CR>
+
 " Remaping leader to Prettier and/ Format - Steam
-nnoremap <leader>f :Format<CR>
+nnoremap <leader>o :Format<CR>
 nnoremap <leader>p :Prettier<CR>
 
 " Fast split navigation with <Ctrl> + hjkl.
@@ -305,12 +304,12 @@ nnoremap <leader>h :split<CR>==
 nnoremap <leader>t :tabnew<CR>==
 
 " Adding a shortcut to Tagbar
-nnoremap <leader>s :TagbarToggle<CR>
+nnoremap <leader>] :TagbarToggle<CR>
 
 " Adding a shortcut to FZF
-nnoremap <leader>a :FZF<CR>
-inoremap <leader>a <Esc>:FZF<CR>
-vnoremap <leader>a <Esc>:FZF<CR>
+nnoremap <leader>z :FZF<CR>
+inoremap <leader>z <Esc>:FZF<CR>
+vnoremap <leader>z <Esc>:FZF<CR>
 
 " Remap netwr
 
