@@ -7,7 +7,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/mileszs/ack.vim.git'
-Plug 'https://github.com/jiangmiao/auto-pairs.git'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/j5shi/CommandlineComplete.vim.git'
 Plug 'itchyny/lightline.vim'
@@ -17,16 +16,20 @@ Plug 'https://github.com/easymotion/vim-easymotion.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
-Plug 'eugen0329/vim-esearch'
 Plug 'https://github.com/terryma/vim-expand-region.git'
+" nvim File tree for nvim 0.5
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
 call plug#end()
 
 set mouse=a
+set foldmethod=indent " Set fold to indent
+set nofoldenable " Open file without folders
 
-" Stoping vim from creating swp files
+"Stoping vim from creating swp files
 set nobackup
 set nowritebackup
 set noswapfile
@@ -101,16 +104,86 @@ map <Leader> <Plug>(easymotion-prefix)
 " s{char}{char} to move to {char}{char}
 nmap <leader>s <Plug>(easymotion-overwin-f2)
 
-" Move to line
-map <Leader>l <Plug>(easymotion-bd-jk)
-nmap <Leader>l <Plug>(easymotion-overwin-line)
-
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Sneak vim
 let g:sneak#label = 1
+
+" Lua nvim tree
+let g:lua_tree_side = 'right' "left by default
+let g:lua_tree_width = 40 "30 by default
+let g:lua_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
+let g:lua_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`
+let g:lua_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
+let g:lua_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
+let g:lua_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
+let g:lua_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+let g:lua_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+let g:lua_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:lua_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
+let g:lua_tree_allow_resize = 1 "0 by default, will not resize the tree when opening a file
+let g:lua_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ }
+"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"1 by default, notice that if 'files' is 1, it will only display
+"if nvim-web-devicons is installed and on your runtimepath
+
+" You can edit keybindings be defining this variable
+" You don't have to define all keys.
+" NOTE: the 'edit' key will wrap/unwrap a folder and open a file
+let g:lua_tree_bindings = {
+    \ 'edit':            ['<CR>', 'o'],
+    \ 'edit_vsplit':     '<C-v>',
+    \ 'edit_split':      '<C-x>',
+    \ 'edit_tab':        '<C-t>',
+    \ 'toggle_ignored':  'I',
+    \ 'toggle_dotfiles': 'H',
+    \ 'refresh':         'R',
+    \ 'preview':         '<Tab>',
+    \ 'cd':              '<C-]>',
+    \ 'create':          'a',
+    \ 'remove':          'd',
+    \ 'rename':          'r',
+    \ 'cut':             'x',
+    \ 'copy':            'y',
+    \ 'paste':           'p',
+    \ 'prev_git_item':   '[c',
+    \ 'next_git_item':   ']c',
+    \ }
+
+" Disable default mappings by plugin
+" Bindings are enable by default, disabled on any non-zero value
+" let lua_tree_disable_keybindings=1
+" " default will show icon by default if no icon is provided
+" default shows no icon by default
+  let g:lua_tree_icons = {
+      \ 'default': '',
+      \ 'symlink': '',
+      \ 'git': {
+      \   'unstaged': "✗",
+      \   'staged': "✓",
+      \   'unmerged': "",
+      \   'renamed': "➜",
+      \   'untracked': "★"
+      \   },
+      \ 'folder': {
+      \   'default': "",
+      \   'open': ""
+      \  }
+      \ }
+
+nnoremap <C-n> :LuaTreeToggle<CR>
+nnoremap <leader>lr :LuaTreeRefresh<CR>
+nnoremap <leader>ln :LuaTreeFindFile<CR>
+" LuaTreeOpen and LuaTreeClose are also available if you need them
+
+" a list of groups can be found at `:help lua_tree_highlight`
+highlight LuaTreeFolderIcon guibg=blue
 
 " Coc.vim
 
@@ -240,9 +313,6 @@ omap ac <Plug>(coc-classobj-a)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
@@ -285,6 +355,7 @@ command! -nargs=1 ReactF :call ReactFunctionComponent(<f-args>)
 """"""""""""Remaps
 " Remap for CocAction
 nnoremap <leader>a :CocAction<CR>
+nnoremap <leader>c :CocList<CR>
 
 " Remaping leader to Prettier and/ Format - Steam
 nnoremap <leader>o :Format<CR>
@@ -316,6 +387,9 @@ vnoremap <leader>z <Esc>:FZF<CR>
 nnoremap <leader>e :Explore<CR>
 inoremap <leader>e <ESC>:Explore<CR>
 vnoremap <leader>e <ESC>:Explore<CR>
+
+" Ctrl+l to clear highlight
+nnoremap <silent> <leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L> 
 
 " Easy compile java in vim with <leader>m
 autocmd FileType java set makeprg=javac\ %
