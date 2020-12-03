@@ -6,17 +6,13 @@
 " Vim Plug config
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/j5shi/CommandlineComplete.vim.git'
 Plug 'itchyny/lightline.vim'
 Plug 'https://github.com/majutsushi/tagbar.git'
-Plug 'https://github.com/tpope/vim-commentary.git'
-Plug 'https://github.com/easymotion/vim-easymotion.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
-Plug 'https://github.com/terryma/vim-expand-region.git'
 Plug 'preservim/nerdtree'
 
 " Traces.vim do not work with
@@ -95,17 +91,6 @@ set laststatus=2
 set noshowmode
 
 """""""""" Plugins configurations
-
-" Easymotion
-map <Leader> <Plug>(easymotion-prefix)
-
-" s{char}{char} to move to {char}{char}
-nmap <leader>s <Plug>(easymotion-overwin-f2)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
-
 " Sneak vim
 let g:sneak#label = 1
 
