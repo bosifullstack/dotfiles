@@ -72,5 +72,5 @@ if [[ $OSTYPE == "darwin"* ]]
   alias sisnettheme='cd ~/Local\ Sites/sisnet-code-shop/app/public/wp-content/themes/sisnet'
   
   else
-  alias v="nvim"
+  alias v="~/nvim-linux64/bin/nvim"
 fi
