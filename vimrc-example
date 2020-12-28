@@ -298,6 +298,10 @@ nnoremap <leader>] :TagbarToggle<CR>
 " Adding a shortcut to FZF
 nnoremap <leader>z :FZF<CR>
 
+" Add shortcut to save and close all
+
+nnoremap ZZ :wqall<CR>
+
 " Ctrl+l to clear highlight
 nnoremap <silent> <leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L> 
 
