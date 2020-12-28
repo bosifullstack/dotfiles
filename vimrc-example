@@ -14,6 +14,8 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/frazrepo/vim-rainbow.git'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
@@ -225,6 +227,14 @@ command! -nargs=0 Format :call CocAction('format')
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
+" NerdTree configs
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+autocmd VimEnter * NERDTree | wincmd p
+
+nnoremap <leader>e :NERDTreeFocus<CR>
+
 """""""""" Personal functions
 
 " Creating a function to initWork
@@ -287,12 +297,6 @@ nnoremap <leader>] :TagbarToggle<CR>
 
 " Adding a shortcut to FZF
 nnoremap <leader>z :FZF<CR>
-
-" Remap NERDTree
-
-autocmd VimEnter * NERDTree
-
-nnoremap <leader>e :NERDTree<CR>
 
 " Ctrl+l to clear highlight
 nnoremap <silent> <leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L> 
