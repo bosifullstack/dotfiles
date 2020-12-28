@@ -288,9 +288,11 @@ nnoremap <leader>] :TagbarToggle<CR>
 " Adding a shortcut to FZF
 nnoremap <leader>z :FZF<CR>
 
-" Remap netwr
+" Remap NERDTree
 
-nnoremap <leader>e :Explore<CR>
+autocmd VimEnter * NERDTree
+
+nnoremap <leader>e :NERDTree<CR>
 
 " Ctrl+l to clear highlight
 nnoremap <silent> <leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L> 
