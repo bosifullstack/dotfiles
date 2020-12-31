@@ -49,6 +49,10 @@ gacp () {
   gp
 }
 
+subs () {
+  ag -l "$1" | xargs perl -pi -E "s/${1}/${2}/g"
+}
+
 alias pdf='evince'
 alias x='clear && ls'
 
