@@ -38,6 +38,12 @@ alias gac='ga && gc'
 alias gitsub='git submodule update --init --recursive'
 
 gacp () {
+  ga
+  git commit
+  gp
+}
+
+gapcp () {
   gap
   wait
   git commit
