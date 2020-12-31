@@ -20,6 +20,7 @@ cdls() {
 }
 
 alias cd='cdls'
+alias rmall='yes | rm -r'
 
 alias ga='git add .'
 alias gap='git add -p'
@@ -36,22 +37,17 @@ alias gb='git branch'
 alias gac='ga && gc'
 alias gitsub='git submodule update --init --recursive'
 
-alias rmall='yes | rm -r'
-
-alias tdl='todoist list'
-alias tda='todoist add'
-alias tds='todoist sync'
-alias tdr='rmtodoist.sh'
-
 gacp () {
   ga
   git commit
   gp
 }
 
-subs () {
+substitute () {
   ag -l "$1" | xargs perl -pi -E "s/${1}/${2}/g"
 }
+
+alias subs="substitute"
 
 alias pdf='evince'
 alias x='clear && ls'
