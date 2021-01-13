@@ -26,3 +26,5 @@
 # ----------------------------------------------------------
 #   * Ex: Resolves Issue #207, see PR #15, etc.
 # ----------------------------------------------------------
+
+# To apply this, you need to: git config --global commit.template path/to/your/file.txt
