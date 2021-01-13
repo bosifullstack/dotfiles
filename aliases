@@ -4,8 +4,6 @@ alias parrot='curl parrot.live'
 alias ..='cd .. && clear && ls'
 alias ...='cd ../.. && clear && ls'
 alias ....='cd ../../.. && clear && ls'
-alias downloads='cd ~/Downloads && clear && ls'
-alias dotfiles='cd ~/dotfiles && clear && ls'
 
 ccd() {
     mkdir -p -- "${1:?No target specified}" &&
@@ -71,13 +69,19 @@ alias nis='npm install --save'
 alias nisd='npm install --save-dev'
 
 alias wordpress='cd ~/Local Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress'
+alias downloads='cd ~/Downloads && x'
+alias dotfiles='cd ~/dotfiles && x'
+alias puc=`cd ~/texts/studies/puc && x'
+alias study-java=`cd ~/study/Java && x'
+alias study-node=`cd ~/study/node && x'
 
 alias vj='v ~/texts/vim-journal.md'
 
 if [[ $OSTYPE == "darwin"* ]]
   then alias v="~/nvim-osx64/bin/nvim"
   alias run='npm run start:stage'
-  alias sisnettheme='cd ~/Local\ Sites/sisnet-code-shop/app/public/wp-content/themes/sisnet'
+  alias run-prod='npm run start:production'
+  alias sisnettheme='cd ~/Local\ Sites/sisnet-code-shop/app/public/wp-content/themes/sisnet && x'
   
   else
   alias v="~/nvim-linux64/bin/nvim"
