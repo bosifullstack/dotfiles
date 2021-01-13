@@ -71,9 +71,9 @@ alias nisd='npm install --save-dev'
 alias wordpress='cd ~/Local Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress'
 alias downloads='cd ~/Downloads && x'
 alias dotfiles='cd ~/dotfiles && x'
-alias puc=`cd ~/texts/studies/puc && x'
-alias study-java=`cd ~/study/Java && x'
-alias study-node=`cd ~/study/node && x'
+alias puc='cd ~/texts/studies/puc && x'
+alias study-java='cd ~/study/Java && x'
+alias study-node='cd ~/study/node && x'
 
 alias vj='v ~/texts/vim-journal.md'
 
