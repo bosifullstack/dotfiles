@@ -18,10 +18,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'https://github.com/majutsushi/tagbar.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/frazrepo/vim-rainbow.git'
+Plug 'https://github.com/godlygeek/tabular.git'
 Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
