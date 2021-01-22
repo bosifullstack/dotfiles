@@ -89,8 +89,10 @@ set bg=dark
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='soft'
 colorscheme gruvbox
-
 syntax on
+
+" Set background to transparent
+hi Normal guibg=NONE ctermbg=NONE
 
 "Configuration to make the lightline plugin work
 set laststatus=2
@@ -239,8 +241,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-nnoremap <leader>e :NERDTreeToggle<CR>
-nnoremap <leader>w :NERDTreeFind<CR>
+nnoremap <leader>e :Explore<CR>
 
 " =============================================================================
 " Personal functions
@@ -270,19 +271,12 @@ command! -nargs=0 Journal :call InitJournalEntry()
 " =============================================================================
 " Snippets
 " =============================================================================
-function ReactScripts()
   source ~/dotfiles/vim-scripts/ReactScripts.vim
-endfunction
-
-function NodeScripts()
   source ~/dotfiles/vim-scripts/NodeScripts.vim
-endfunction
 
-command! -nargs=0 ReactScripts :call ReactScripts()
-command! -nargs=0 NodeScripts :call NodeScripts()
 " =============================================================================
 " Remaps
-"""""""""""""""
+" =============================================================================
 " Remap for CocAction
 nnoremap <leader>a :CocAction<CR>
 nnoremap <leader>c :CocList<CR>
