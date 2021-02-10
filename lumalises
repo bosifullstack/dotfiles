@@ -1,36 +1,18 @@
 gitcheckout () {
   git checkout $1
-  git pull --all
+  git pull
   git checkout -b "$2/$3"
-  git push --set-upstream origin "$1/$2"
+  git push --set-upstream origin "$2/$3"
 }
 
-gitOpenPR () {
-  currentBranch=$( git branch --show-current )
-  taskType=$( echo $currentBranch | grep '/.*' | cut -f 1 -d '/' )
-  taskID=$( echo $currentBranch | grep '/.*' | cut -f 2 -d '/' | cut -f 1 -d '-' )
-
-  currentTag=$( gh release list -L 1 )
-  currentTrainReleaseTag=$( echo $currentTag | cut -f 1 -d ".")
-  nextTrainReleaseTag=$( expr 1 + $currentTrainReleaseTag )
-  currentIssueReleaseTag=$( echo $currentTag | cut -f 2 -d "." | cut -f 1 -d$'\t')
-  nextIssueReleaseTag=$( expr 1 + $currentIssueReleaseTag )
-
-  if [[ $taskType == "hotfix" ]];
-  then
-    gh pr create --base stage --title "[#$taskID]($taskType)" --web
-    gh release create --title "$currentTrainReleaseTag.$nextIssueReleaseTag" --notes " " --target "$currentBranch" "$currentTrainReleaseTag.$nextIssueReleaseTag"
-
-  elif [[ $currentBranch == "dev" ]];
-  then
-    gh pr create --base stage --title "Release $nextTrainReleaseTag.0" --web
-    gh release create --title "$nextTrainReleaseTag.0" --notes " " --target "$currentBranch" "$nextTrainReleaseTag.0"
-  elif [[ $currentBranch == "stage" ]];
-  then
-    gh pr create --base prod --title "Release $currentTag to prodiction" --web
-  else
-    gh pr create --base dev --title "[#$taskID]($taskType)" --web
-  fi
+gitPR () {
+  gh pr create --base dev --title "#$taskID -" --web
+}
+gitPRstage () {
+  gh pr create --base stage --title "#$taskID -" --web
+}
+gitPRmaster () {
+  gh pr create --base master --title "#$taskID -" --web
 }
 
 alias gopr=gitOpenPR
@@ -40,5 +22,5 @@ alias "gitFeat"='gitcheckout dev feat'
 alias gffs='gitcheckout dev feat'
 
 # creates a hotfix branch on local and remote
-alias "gitHotfix"='gitcheckout stage hotfix'
-alias "ghf"='gitcheckout stage hotfix'
+alias "gitFix"='gitcheckout dev fix'
+alias "ghf"='gitcheckout dev fix'

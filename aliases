@@ -49,6 +49,10 @@ gapcp () {
   gp
 }
 
+changeBranch () {
+  gcc "$1" && gpp && gitsub
+}
+
 substitute () {
   ag -l "$1" | xargs perl -pi -E "s/${1}/${2}/g"
 }
