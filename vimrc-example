@@ -23,6 +23,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'https://github.com/tyru/open-browser.vim.git'
+Plug 'https://github.com/weirongxu/plantuml-previewer.vim.git'
+Plug 'aklt/plantuml-syntax'
 
 " Traces.vim do not work with
 Plug 'https://github.com/markonm/traces.vim.git'
