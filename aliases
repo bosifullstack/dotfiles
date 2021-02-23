@@ -1,24 +1,27 @@
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias parrot='curl parrot.live'
 
-alias ..='cd .. && clear && ls'
-alias ...='cd ../.. && clear && ls'
-alias ....='cd ../../.. && clear && ls'
-
-ccd() {
-    mkdir -p -- "${1:?No target specified}" &&
-    cd -- "$1"
-    clear
-}
-
-cdls() {
-  cd "$1"
-  clear
-  ls
-}
-
-alias cd='cdls'
 alias rmall='yes | rm -r'
+
+substitute () {
+  ag -l "$1" | xargs perl -pi -E "s/${1}/${2}/g"
+}
+
+alias subs="substitute"
+
+alias pdf='evince'
+alias x='clear && ls'
+
+alias pac='sudo pacman -Syu'
+alias :q="exit"
+
+alias bc='bc -l'
+
+alias n='npm'
+alias nr='npm run'
+alias nid='npm install --save-dev'
+
+############## Git aliases ###############################################
 
 alias ga='git add .'
 alias gap='git add -p'
@@ -53,24 +56,48 @@ changeBranch () {
   gcc "$1" && gpp && gitsub
 }
 
-substitute () {
-  ag -l "$1" | xargs perl -pi -E "s/${1}/${2}/g"
+gitcheckout () {
+  git checkout $1
+  git pull
+  git checkout -b "$2/$3"
+  git push --set-upstream origin "$2/$3"
 }
 
-alias subs="substitute"
+gitPR () {
+  gh pr create --base dev --title "#$taskID -$1" --web
+}
+gitPRstage () {
+  gh pr create --base stage --title "#$taskID -$1" --web
+}
+gitPRmaster () {
+  gh pr create --base master --title "Cherry | Master | #$taskID -$1" --web
+}
 
-alias pdf='evince'
-alias x='clear && ls'
+alias gopr=gitOpenPR
 
-alias pac='sudo pacman -Syu'
-alias :q="exit"
+# creates a hotfix branch on local and remote
+alias "gitBranch"='gitcheckout dev bosi'
+########################################################
 
-alias bc='bc -l'
+######################## Folders aliases ###################################################
 
-alias n='npm'
-alias nr='npm run'
-alias nis='npm install --save'
-alias nisd='npm install --save-dev'
+alias ..='cd .. && clear && ls'
+alias ...='cd ../.. && clear && ls'
+alias ....='cd ../../.. && clear && ls'
+
+ccd() {
+    mkdir -p -- "${1:?No target specified}" &&
+    cd -- "$1"
+    clear
+}
+
+cdls() {
+  cd "$1"
+  clear
+  ls
+}
+
+alias cd='cdls'
 
 alias wordpress='cd ~/Local Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress'
 alias downloads='cd ~/Downloads && x'
@@ -79,8 +106,19 @@ alias puc='cd ~/texts/studies/puc && x'
 alias study-java='cd ~/study/Java && x'
 alias study-node='cd ~/study/node && x'
 
-alias vj='v ~/texts/vim-journal.md'
+alias work='cd ~/work'
 
+alias study='cd ~/study'
+alias front='cd ~/study/frontend'
+alias back='cd ~/study/backend'
+alias games='cd ~/study/gameDev'
+alias python='cd ~/study/python'
+
+alias text='cd ~/texts'
+alias reads='cd ~/texts/readings'
+alias literature='cd ~/texts/literature'
+
+######################### System specifics ###################################
 if [[ $OSTYPE == "darwin"* ]]
   then alias v="~/nvim-osx64/bin/nvim"
   alias run='npm run start:stage'

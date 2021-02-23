@@ -17,10 +17,5 @@ gitPRmaster () {
 
 alias gopr=gitOpenPR
 
-# creates a feature branch on local and remote
-alias "gitFeat"='gitcheckout dev feat'
-alias gffs='gitcheckout dev feat'
-
 # creates a hotfix branch on local and remote
-alias "gitFix"='gitcheckout dev fix'
-alias "ghf"='gitcheckout dev fix'
+alias "gitBranch"='gitcheckout dev bosi'

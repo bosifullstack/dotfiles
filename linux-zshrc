@@ -102,24 +102,3 @@ export PATH="$HOME/dotfiles/scripts:$PATH"
 source ~/dotfiles/aliases
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# aliases for the linux
-
-alias work='cd ~/work'
-
-alias study='cd ~/study'
-alias front='cd ~/study/frontend'
-alias back='cd ~/study/backend'
-alias games='cd ~/study/gameDev'
-alias python='cd ~/study/python'
-
-alias text='cd ~/texts'
-alias reads='cd ~/texts/readings'
-alias literature='cd ~/texts/literature'
-alias wordpress='cd ~/Local\ Sites/web-front-react-and-wordpress/app/public/wp-content/themes/react-and-wordpress'
-
-
-# luma aliases
-alias luma='cd ~/Local\ Sites/lumahealth-2019/app/public'
-alias lumatheme='cd ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2'
-alias lumasass='sass ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/assets/sass/style.scss ~/Local\ Sites/lumahealth-2019/app/public/wp-content/themes/LumaHealth2/css/style2.css'
