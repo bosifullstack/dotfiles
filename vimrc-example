@@ -285,6 +285,13 @@ command! -nargs=0 Journal :call InitJournalEntry()
 nnoremap <leader>a :CocAction<CR>
 nnoremap <leader>c :CocList<CR>
 
+" Remaps for copy and paste on other apps
+vnoremap <leader>c "+y<CR>
+nnoremap <leader>cc "+yy<CR>
+vnoremap <leader>d "+d<CR>
+nnoremap <leader>dd "+dd<CR>
+nnoremap <leader>s "+p<CR>
+
 " Remaping leader to Prettier and/ Format - Steam
 nnoremap <leader>p :Format<CR>
 
