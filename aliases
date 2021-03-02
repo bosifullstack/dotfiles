@@ -66,11 +66,6 @@ gitcheckout () {
 gitPR () {
   currentBranch=$( git branch --show-current )
   taskID=$( echo $currentBranch | grep '/.*' | cut -f 2 -d '/' | cut -f 1 -d '-' )
-  gh pr create --base dev --title "#$taskID -$1" --web
-}
-gitPRstage () {
-  currentBranch=$( git branch --show-current )
-  taskID=$( echo $currentBranch | grep '/.*' | cut -f 2 -d '/' | cut -f 1 -d '-' )
   gh pr create --base stage --title "#$taskID -$1" --web
 }
 gitPRmaster () {
@@ -82,7 +77,7 @@ gitPRmaster () {
 alias gopr=gitOpenPR
 
 # creates a hotfix branch on local and remote
-alias "gitBranch"='gitcheckout dev bosi'
+alias "gitBranch"='gitcheckout stage bosi'
 ########################################################
 
 ######################## Folders aliases ###################################################
