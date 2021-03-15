@@ -3,18 +3,21 @@ function ReactFunctionComponent(name)
   execute "normal 2jea " . a:name
   execute "normal /default\<CR>"
   execute "normal A " . a:name . ";"
-  execute "normal 4kA"
+  execute "normal jdd"
+  execute "normal 5kA"
 endfunction
 
 function WithStyles()
   execute "normal gg"
   execute "normal oimport { withStyles, WithStyles } from '@material-ui/core/styles';"
   execute "normal G"
-  execute "normal 3w"
+  execute "normal $x"
+  execute "normal 0"
+  execute "normal 2w"
   execute "normal diw"
   execute "normal awithStyles(useStyles)( "
   execute "normal P"
-  execute "normal A);"
+  execute "normal a);"
 endfunction
 
 function Import(name)
